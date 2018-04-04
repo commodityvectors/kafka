@@ -14,13 +14,15 @@
 // limitations under the License.
 
 if (!hasProperty('scalaVersion')) {
-  ext.scalaVersion = '2.10.5'
+  ext.scalaVersion = '2.12.5'
 }
-ext.defaultScalaVersion = '2.10.5'
+ext.defaultScalaVersion = '2.12.5'
 if (scalaVersion.startsWith('2.10')) {
     ext.baseScalaVersion = '2.10'
 } else if (scalaVersion.startsWith('2.11')) {
     ext.baseScalaVersion = '2.11'
+} else if (scalaVersion.startsWith('2.12')) {
+    ext.baseScalaVersion = '2.12'
 } else {
     ext.baseScalaVersion = scalaVersion
 }
